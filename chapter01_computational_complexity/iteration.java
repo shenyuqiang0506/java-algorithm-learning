@@ -22,6 +22,20 @@ public class iteration {
         return res;
     }
 
+    /* while 循环（两次更新） */
+    static int whileLoopII(int n) {
+        int res = 0;
+        int i = 1; // 初始化条件变量
+        // 循环求和 1, 4, 10, ...
+        while (i <= n) {
+            res += i;
+            // 更新条件变量
+            i++;
+            i *= 2;
+        }
+        return res;
+    }
+
     public static void main(String[] args) {
         int n = 5;
         int res;
@@ -30,5 +44,7 @@ public class iteration {
         System.out.println("\nfor 循环的求和结果 res = " + res);
         res = whileLoop(n);
         System.out.println("\nwhile 循环的求和结果 res = " + res);
+        res = whileLoopII(n);
+        System.out.println("\nwhile 循环（两次更新）求和结果 res = " + res);
     }
 }
